@@ -1,26 +1,5 @@
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    morph(player_sprite, sprites.food.smallLemon)
-})
 function morph (mySprite: Sprite, myImage: Image) {
     start_img = mySprite.image
-    mid_img = img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `
     end_img = myImage
     pixels_to_change = []
     for (let index = 0; index <= 255; index++) {
@@ -40,8 +19,10 @@ let row = 0
 let random_pixel = 0
 let pixels_to_change: number[] = []
 let end_img: Image = null
-let mid_img: Image = null
 let mySprite: Sprite = null
 let start_img: Image = null
-let player_sprite: Sprite = null
-player_sprite = sprites.create(sprites.food.smallApple, SpriteKind.Player)
+let player_sprite = sprites.create(sprites.food.smallApple, SpriteKind.Player)
+game.showLongText("Press A to start morph.", DialogLayout.Bottom)
+morph(player_sprite, sprites.food.smallLemon)
+morph(player_sprite, sprites.food.smallStrawberry)
+morph(player_sprite, sprites.food.smallPizza)
