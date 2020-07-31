@@ -33,8 +33,6 @@ function morph (mySprite: Sprite, myImage: Image) {
         start_img.setPixel(column, row, end_img.getPixel(column, row))
         mySprite = sprites.create(start_img, SpriteKind.Player)
         pause(0.01)
-        console.log("Remaining: " + pixels_to_change.length)
-        console.log("Random: " + random_pixel)
     }
 }
 let column = 0
