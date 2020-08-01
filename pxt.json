@@ -1,14 +1,12 @@
 {
-    "name": "Sprite-Image-Morph",
+    "name": "pxt-sprite-image-morph",
     "description": "",
     "dependencies": {
         "device": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
+        "sprite-image-morph.ts",
         "README.md",
-        "main.py"
     ],
     "testFiles": [
         "test.ts"
